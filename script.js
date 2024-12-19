@@ -1,5 +1,7 @@
-const API_KEY="54862f9c1f734c9e9e847cff120e63c3";
-const url="https://newsapi.org/v2/everything?q=";
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+const API_KEY = '54862f9c1f734c9e9e847cff120e63c3';
+const url = 'https://newsapi.org/v2/everything?q=';
+
 
 window.addEventListener('load',()=>fetchNews("India"));
 
@@ -9,10 +11,16 @@ function reload(){
     curSelectedNav=null;
 }
 
-async function fetchNews(query){
-    const response=await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data= await response.json();
-    bindData(data.articles);  
+async function fetchNews(query) {
+    const response = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const data = await response.json();
+
+    if (response.ok) {
+        console.log("API Data:", data);
+        bindData(data.articles);
+    } else {
+        console.error("API Error:", data);
+    }
 }
 
 function bindData(articles){
