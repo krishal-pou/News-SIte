@@ -22,16 +22,6 @@ Welcome to the **News App**! This app allows you to stay updated with the latest
 3. **News Cards**: Each news article is displayed in a card with the title, source, description, and image. 🖼️
 4. **Click to Open**: Clicking on a news card will open the full article in a new tab. 🌐
 
-## 🛠️ **Installation Instructions**:
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/krishal-pou/news-app.git
-    ```
-2. Navigate to the project folder:
-    ```bash
-    cd news-app
-    ```
-3. Open the `index.html` file in your browser to view the app.
 
 ## 🎨 **Styling & Design**:
 - The app is styled using **CSS Flexbox** for a clean, responsive layout.
